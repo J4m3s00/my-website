@@ -1,7 +1,9 @@
 use rocket::fs::FileServer;
 
+#[macro_use]
+extern crate rocket;
 
 #[launch]
 fn rocket() -> _ {
-    rocket::build().mount("/public", FileServer::from("/front-end/build"))
+    rocket::build().mount("/", FileServer::from("front-end/build"))
 }
