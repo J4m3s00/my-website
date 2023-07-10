@@ -9,3 +9,7 @@ cd front-end
 npm install
 npm run build
 
+cd ..
+rustup default stable
+cargo build --release
+sudo ./target/release/my-website
